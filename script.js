@@ -1,4 +1,6 @@
 const menuHome = document.querySelector("#menuHome");
+const homeDisplay = document.querySelector("#wrapper_left");
+const subDisplay = document.querySelector("wrapper_right");
 const menuGame = document.querySelector("#menuGame");
 const menuJukebox = document.querySelector("#menuJukebox");
 const menuPhoto = document.querySelector("#menuPhoto");
@@ -10,6 +12,7 @@ const homeChange = () => {
   menuGame.style = "background: #ddd; color: #181818";
   menuJukebox.style = "background: #ddd; color: #181818";
   menuPhoto.style = "background: #ddd; color: #181818";
+  homeDisplay.style = "display: flex";
 };
 const gameChange = () => {
   contentFrame.setAttribute("src", "./game.html");
@@ -17,6 +20,7 @@ const gameChange = () => {
   menuGame.style = "background: #fff; color: #000";
   menuJukebox.style = "background: #ddd; color: #181818";
   menuPhoto.style = "background: #ddd; color: #181818";
+  homeDisplay.style = "display: none";
 };
 const photoChange = () => {
   contentFrame.setAttribute("src", "./photo.html");
@@ -24,6 +28,7 @@ const photoChange = () => {
   menuGame.style = "background: #ddd; color: #181818";
   menuJukebox.style = "background: #ddd; color: #181818";
   menuPhoto.style = "background: #fff; color: #000";
+  homeDisplay.style = "display: none";
 };
 const jukeboxChange = () => {
   contentFrame.setAttribute("src", "./jukebox.html");
@@ -31,6 +36,7 @@ const jukeboxChange = () => {
   menuGame.style = "background: #ddd; color: #181818";
   menuJukebox.style = "background: #fff; color: #000";
   menuPhoto.style = "background: #ddd; color: #181818";
+  homeDisplay.style = "display: none";
 };
 
 menuHome.addEventListener("click", homeChange);
