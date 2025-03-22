@@ -4,6 +4,7 @@ const subDisplay = document.querySelector("wrapper_right");
 const menuGame = document.querySelector("#menuGame");
 const menuJukebox = document.querySelector("#menuJukebox");
 const menuPhoto = document.querySelector("#menuPhoto");
+const menuGuestbook = document.querySelector("#menuGuestbook");
 const contentFrame = document.querySelector("#contentFrame");
 
 const homeChange = () => {
@@ -12,6 +13,7 @@ const homeChange = () => {
   menuGame.style = "background: #ddd; color: #181818";
   menuJukebox.style = "background: #ddd; color: #181818";
   menuPhoto.style = "background: #ddd; color: #181818";
+  menuGuestbook.style = "background: #ddd; color: #181818";
   homeDisplay.style = "display: flex";
 };
 const gameChange = () => {
@@ -20,6 +22,7 @@ const gameChange = () => {
   menuGame.style = "background: #fff; color: #000";
   menuJukebox.style = "background: #ddd; color: #181818";
   menuPhoto.style = "background: #ddd; color: #181818";
+  menuGuestbook.style = "background: #ddd; color: #181818";
   homeDisplay.style = "display: none";
 };
 const photoChange = () => {
@@ -28,6 +31,7 @@ const photoChange = () => {
   menuGame.style = "background: #ddd; color: #181818";
   menuJukebox.style = "background: #ddd; color: #181818";
   menuPhoto.style = "background: #fff; color: #000";
+  menuGuestbook.style = "background: #ddd; color: #181818";
   homeDisplay.style = "display: none";
 };
 const jukeboxChange = () => {
@@ -36,6 +40,16 @@ const jukeboxChange = () => {
   menuGame.style = "background: #ddd; color: #181818";
   menuJukebox.style = "background: #fff; color: #000";
   menuPhoto.style = "background: #ddd; color: #181818";
+  menuGuestbook.style = "background: #ddd; color: #181818";
+  homeDisplay.style = "display: none";
+};
+const guestbookChange = () => {
+  contentFrame.setAttribute("src", "./guestbook.html");
+  menuHome.style = "background: #ddd; color: #181818";
+  menuGame.style = "background: #ddd; color: #181818";
+  menuJukebox.style = "background: #ddd; color: #181818";
+  menuPhoto.style = "background: #ddd; color: #181818";
+  menuGuestbook.style = "background: #fff; color: #000";
   homeDisplay.style = "display: none";
 };
 
@@ -43,12 +57,13 @@ menuHome.addEventListener("click", homeChange);
 menuGame.addEventListener("click", gameChange);
 menuJukebox.addEventListener("click", jukeboxChange);
 menuPhoto.addEventListener("click", photoChange);
+menuGuestbook.addEventListener("click", guestbookChange);
 
 document.addEventListener("DOMContentLoaded", () => {
   const imagePreview = document.getElementById("imagePreview");
   const imageUpload = document.getElementById("imageUpload");
 
-  // div 클릭 시 파일 업로드 창 열기
+  // 파일 업로드
   imagePreview.addEventListener("click", () => {
     imageUpload.click();
   });

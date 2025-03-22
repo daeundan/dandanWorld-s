@@ -1,0 +1,67 @@
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left; /* 전체 내용 왼쪽 정렬 */
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column; /* 닉네임, 댓글, 등록 버튼이 세로로 배치되도록 설정 */
+  margin-top: 10px;
+}
+
+.guest_input {
+  display: flex;
+  justify-content: space-between; /* 각 입력 요소들을 한 줄로 배치 */
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+input {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#nickname {
+  flex: 2; /* 닉네임 입력창이 2배로 넓어지도록 설정 */
+}
+
+#comment {
+  flex: 6; /* 댓글 입력창이 6배로 넓어지도록 설정 */
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+button.deleteBtn {
+  background-color: red;
+  margin-left: 10px;
+}
+
+/* 방명록에서 닉네임과 댓글이 한 줄로 배치되도록 */
+.guest_entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.guest_entry p {
+  margin: 0;
+  flex: 1; /* 닉네임과 댓글을 왼쪽에 붙여서 배치 */
+}
+
+.guest_entry button.deleteBtn {
+  margin-left: 10px;
+}

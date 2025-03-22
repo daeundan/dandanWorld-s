@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방명록</title>
+    <link rel="stylesheet" href="./guestbook.css" />
+    <script defer src="./guestbook.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper_header">
+        <div class="contents_title">
+          <div class="title">방명록</div>
+          <div class="subtitle">단단에게 방문기록을 남겨보세요!</div>
+        </div>
+        <div class="divideLine"></div>
+        <!-- 닉네임과 방명록 입력 필드 -->
+        <div class="inputWrapper">
+          <div class="guest_input">
+            <input type="text" id="nickname" placeholder="닉네임" />
+            <input type="text" id="comment" placeholder="댓글을 입력하세요" />
+            <button id="addComment">등록</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 방명록 리스트 -->
+      <div class="guestbookContainer" id="guestbookContainer"></div>
+
+      <!-- 페이지네이션 (추후 구현 가능) -->
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </body>
+</html>
