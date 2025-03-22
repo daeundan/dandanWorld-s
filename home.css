@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* built-in-function */
+/* mixin */
+/* common */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* home */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper .wrapper_header {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper .wrapper_header .contents_title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrapper .wrapper_header .contents_title .title {
+  color: #55b2e4;
+  font: bold 14px/1 "arial";
+}
+.wrapper .wrapper_header .contents_title .subtitle {
+  font: normal 14px/1 "arial";
+}
+.wrapper .wrapper_header .divideLine {
+  width: 100%;
+  border-top: 1px solid #808080;
+  margin: 4px 0;
+}
+.wrapper .wrapper_body {
+  width: 100%;
+  height: 270px;
+}
+.wrapper .wrapper_body .contents_title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrapper .wrapper_body .contents_title .title {
+  color: #55b2e4;
+  font: bold 14px/1 "arial";
+}
+.wrapper .wrapper_body .contents_title .subtitle {
+  font: normal 14px/1 "arial";
+}
+.wrapper .wrapper_body .divideLine {
+  width: 100%;
+  border-top: 1px solid #808080;
+  margin: 4px 0;
+}
+.wrapper .wrapper_body .video {
+  border: 2px solid #ddd;
+  width: 100%;
+  height: 100%;
+  background: url("./contents/miniroombg.jpg") center/cover no-repeat;
+  margin-top: 10px;
+}
+.wrapper .wrapper_body2 {
+  width: 100%;
+}
+.wrapper .wrapper_body2 .contents_title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrapper .wrapper_body2 .contents_title .title {
+  color: #55b2e4;
+  font: bold 14px/1 "arial";
+}
+.wrapper .wrapper_body2 .contents_title .subtitle {
+  font: normal 14px/1 "arial";
+}
+.wrapper .wrapper_body2 .divideLine {
+  width: 100%;
+  border-top: 1px solid #808080;
+  margin: 4px 0;
+}
+
+.guest_input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.guest_input {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto; /* 닉네임:댓글 = 1:2, 버튼은 auto */
+  gap: 10px; /* 요소 간 간격 */
+  align-items: center; /* 세로 정렬 */
+  max-width: 500px; /* 최대 너비 설정 */
+}
+
+.guest_input input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#nickname {
+  width: 100%; /* grid에서 설정된 비율대로 너비 적용 */
+}
+
+#comment {
+  width: 100%; /* grid에서 설정된 비율대로 너비 적용 */
+}
+
+/* placeholder가 서서히 흐려지는 효과 */
+.guest_input input::-moz-placeholder {
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.guest_input input::placeholder {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.guest_input input:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+.guest_input input:focus::placeholder {
+  opacity: 0;
+}
+
+.guest_input button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.guest_input button:hover {
+  background-color: #0056b3;
+}
+
+#commentList {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.comment-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.comment-item span {
+  flex-grow: 1;
+}
+
+.comment-item button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 3px 6px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.comment-item button:hover {
+  background: darkred;
+}/*# sourceMappingURL=home.css.map */

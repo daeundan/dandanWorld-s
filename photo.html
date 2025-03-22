@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사진첩</title>
+    <link rel="stylesheet" href="./photo.css" />
+    <script defer src="./photo.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper_header">
+        <div class="contents_title">
+          <div class="title">사진첩</div>
+          <div class="subtitle">Photo</div>
+        </div>
+        <div class="divideLine"></div>
+
+        <!-- 사진 업로드 폼 -->
+        <div class="uploadForm">
+          <input type="file" id="photoUpload" accept="image/*" />
+          <input type="text" id="photoTitle" placeholder="제목을 입력하세요" />
+          <input type="text" id="photoDetail" placeholder="설명을 입력하세요" />
+          <button onclick="addPhoto()">사진 추가</button>
+        </div>
+
+        <!-- 사진 리스트 -->
+        <div class="photoContainer" id="photoContainer"></div>
+
+        <!-- 페이지네이션 -->
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </div>
+
+    <script src="./photo.js"></script>
+  </body>
+</html>
