@@ -66,4 +66,12 @@ button.deleteBtn {
 
 .guest_entry button.deleteBtn {
   margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .guest_input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 }/*# sourceMappingURL=guestbook.css.map */
